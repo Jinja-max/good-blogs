@@ -1,0 +1,10 @@
+<nav>
+    <a href="{% url 'home' %}">Home</a>
+    
+    
+    {% if page == 'blog' %}
+        <a href="{% url 'index' %}">Index</a>
+    {% endif %}
+    
+    <a href="{% url 'logout' %}"> logout </a>
+</nav>

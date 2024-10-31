@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    <link rel="stylesheet" href="{% static 'blog/auth.css' %}">
+</head>
+<body>
+    <div class="heading-container">
+        <h2>login to experience all new world of blogs</h2><br><br><br>
+    </div> 
+    <div class="signup-container">
+        {% if no_user %}
+        <p class="username-exists">user doesn't exist, please try again</p>
+        {% endif %}
+        {% if invalid_pass %}
+        <p class="username-exists">wrong password, please try again</p>
+        {% endif %}
+        <form action="{% url 'login' %}" method="POST">
+            {% csrf_token %}
+            {{ form }}
+            <button>login</button>
+        </form>
+    </div>
+    <br>
+    <p>doesn't have an account already? <a href="{% url 'signup' %}">signup here</a></p>
+</body>
+</html>

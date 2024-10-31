@@ -1,0 +1,31 @@
+{% extends 'blog_base.html' %} 
+
+
+{% block tab_name %}
+    author details
+{%endblock%}
+
+{% block others %}
+    {% include 'blog/includes/navigation.html' with page='blog' %}
+{% endblock %}
+
+{% block title %} 
+    {{ auth.fname }}'s page
+{% endblock %} 
+
+{% block content %}
+   
+    <div class="content">
+        first name :{{ auth.fname }} <br>
+        last name : {{ auth.lname }} <br>
+        mail : {{ auth.mail }} <br>
+        <h3>Blogs written :</h3>
+        
+        {% for blog in blogs %}
+            <li><a href="{{blog.get_absolute_url}}">{{ blog.title|title }}</a></li>
+        {% endfor %}
+            
+    </div>
+   
+
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends 'blog_base.html' %} 
+{% load static %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'blog/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/index.css' %}" />
+<link
+  href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+  rel="stylesheet"
+/>
+{% endblock %} 
+
+{% block tab_name %}
+    {{ blog.title|title }} 
+{%endblock%}
+
+{% block others %}
+    {% include 'blog/includes/navigation.html' with page='blog' %}
+{% endblock %}
+
+{% block title %} 
+    {{ blog.title }} 
+    {{ blog.date }}
+{% endblock %} 
+
+{% block content %}
+    <h4 style="float:left;"> <p style="float:left;">preface : {{ blog.excerpt }}</p>
+    
+    {% if blog.image %}
+    <img src="{{ blog.image.url }}" alt="image attached by author">
+    {% endif %}
+    
+    <div class="content" style="float:left;">{{ blog.content }}</div>
+    <p>author: <a href="{{blog.author.get_absolute_url}}">{{ blog.author.fname }}</a></p>
+    <h3>tags: </h3>
+    <ul>
+    {% for tag in tags %}
+        <li> <a href="{{ tag.get_absolute_url }}">{{ tag.caption }}</a></li>
+    {% endfor %}
+    </ul>
+{% endblock %}
+
+{% block extras %}
+<h3>Comments</h3>
+<form class="form-container" action="{{ blog.get_absolute_url }}" method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <button> add comment </button>
+</form>
+
+<h4>previous comments</h4>
+<ul class="styled-list">
+    {% for comment in comments %}
+       <li>
+        {{ comment.time_stamp }}<br>
+        {{ comment.comment }}
+       </li>
+    {% endfor %}
+        
+</ul>
+{% endblock%}

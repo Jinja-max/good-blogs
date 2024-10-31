@@ -1,0 +1,342 @@
+/* styles.css */
+
+/* General body styles */
+body {
+  float: left;
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+}
+
+/* Title container styles */
+.title-container {
+  width: 100%;
+  padding: 20px 0;
+  background-color: #1e1e1e;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Title styles */
+.title {
+  font-family: "Merriweather", serif;
+  color: #ff5722;
+  font-size: 2.5em;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Container for the content */
+.container {
+  float: center;
+  max-width: 800px;
+  width: 90%;
+  padding: 20px;
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 10px;
+  margin: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7), 0 6px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* Header tags styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #ff9800;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  font-size: 2.2em;
+}
+
+h2 {
+  font-size: 1.8em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1.2em;
+}
+
+h5 {
+  font-size: 1em;
+}
+
+h6 {
+  font-size: 0.9em;
+}
+
+/* Content styles */
+.content {
+  /* float: left; */
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.6;
+  font-size: 1.1em;
+  text-align: justify;
+}
+
+/* Paragraph styles */
+p {
+  margin-bottom: 20px;
+}
+
+/* Highlight styles */
+.highlight {
+  background-color: #424242;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #ffffff;
+}
+
+/* anchor tags */
+
+/* Base styles for links */
+a {
+  text-decoration: none;
+  color: #3498db; /* Primary color */
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+a:hover,
+a:focus {
+  color: #2c3e50; /* Darker color for hover and focus states */
+  transform: scale(1.05);
+}
+
+/* Underline effect */
+a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #3498db;
+  transition: width 0.3s ease;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+}
+
+a:hover::after,
+a:focus::after {
+  width: 100%;
+}
+
+/* Active link styles */
+a:active {
+  color: #e74c3c; /* Red color for active state */
+  transform: scale(0.95);
+}
+
+/* navigation bar*/
+
+/* Navigation bar styles */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* background-color: ; Dark background color */
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+nav a {
+  color: #ecf0f1; /* Light text color */
+  text-decoration: none;
+  margin-right: 2rem;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #3498db; /* Highlight color */
+  transform: scale(1.1);
+}
+
+nav a:active {
+  color: #e74c3c; /* Active state color */
+  transform: scale(0.95);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav a {
+    margin: 0.5rem 0;
+  }
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #1778da; /* Light gray background */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+img {
+  border-radius: 50%;
+  width: 300px; /* Adjust the size as needed */
+  height: 300px; /* Keep the same height to maintain aspect ratio */
+  margin-right: 20px;
+  border: 5px solid #fff; /* White border to create a photo frame effect */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); /* Shadow for the photo frame */
+  float: left;
+}
+
+/* Dark mode form container */
+
+:root {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --input-bg-color: #1e1e1e;
+  --input-border-color: #444444;
+  --button-bg-color: #214a86;
+  --button-text-color: #e0e0e0;
+  --button-hover-bg-color: #555;
+  --label-color: #e0e0e0;
+  --highlight-color: #bb86fc;
+}
+
+.form-container {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 25px;
+  background-color: #2c2c2c; /* Darker background */
+  border: 1px solid #444;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.3s ease;
+}
+
+.form-container:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+/* Dark mode form fields */
+.form-container label {
+  display: block;
+  margin-bottom: 8px;
+  color: #e0e0e0; /* Light text for contrast */
+  font-weight: 500;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="password"],
+.form-container textarea {
+  width: 95%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border: 1px solid #555;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #3a3a3a; /* Darker input background */
+  color: #e0e0e0; /* Light text color */
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-container input[type="text"]:focus,
+.form-container input[type="email"]:focus,
+.form-container input[type="password"]:focus,
+.form-container textarea:focus {
+  border-color: #66afe9;
+  box-shadow: 0 0 8px rgba(102, 175, 233, 0.5);
+  outline: none;
+}
+
+/* Dark mode form buttons */
+.form-container button[type="submit"] {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s ease;
+}
+
+.form-container button[type="submit"]:hover {
+  background-color: #388e3c;
+}
+
+/* Dark mode form errors */
+.errorlist {
+  color: #e57373; /* Lighter red for dark mode */
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.errorlist li {
+  margin-bottom: 4px;
+}
+
+/* Error inputs in dark mode */
+.error input[type="text"],
+.error input[type="email"],
+.error input[type="password"],
+.error textarea {
+  border-color: #e57373;
+  background-color: #502020; /* Darker red background for errors */
+}
+
+/* Dark mode placeholder styling for better UX */
+.form-container input::placeholder,
+.form-container textarea::placeholder {
+  color: #bbb;
+  font-style: italic;
+}
+
+/* Responsive Design for Dark Mode */
+@media (max-width: 480px) {
+  .form-container {
+    padding: 20px;
+    margin: 20px;
+  }
+}
+
+button {
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--button-hover-bg-color);
+}

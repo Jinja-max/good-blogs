@@ -1,0 +1,32 @@
+{% extends 'blog_base.html' %}
+{% load static %} 
+
+{% block tab_name %} 
+ Index
+{%endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'blog/index.css' %}" />
+<link
+  href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+  rel="stylesheet"
+/>
+{% endblock %} 
+
+{% block others %}
+    {% include 'blog/includes/navigation.html' with page="index" %}
+{% endblock %}
+
+{% block title %}
+All blogs
+{% endblock %} 
+
+{% block content %}
+<ul class="styled-list">
+  {% for blog in blogs %}
+  <li>
+    <a href="{{ blog.get_absolute_url }}">{{ blog.title|title }}</a>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}

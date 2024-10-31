@@ -1,0 +1,60 @@
+/* Reset some default styles for better control */
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+/* Styling the list container */
+ul.styled-list {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0;
+  background: #202422;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Styling each list item */
+ul.styled-list li {
+  border-bottom: 1px solid #ddd;
+}
+
+ul.styled-list li:last-child {
+  border-bottom: none;
+}
+
+/* Styling the anchor tags */
+ul.styled-list li a {
+  display: block;
+  padding: 15px 20px;
+  color: #f1efef;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: "Arial", sans-serif;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for anchor tags */
+ul.styled-list li a:hover {
+  background: #007bff;
+  color: #a4bd62;
+  padding-left: 30px;
+}
+
+/* Custom bullet points */
+/* ul.styled-list li::before {
+  content: ".";
+  color: #007bff;
+  font-size: 20px;
+  display: inline-block;
+  width: 1em;
+  margin-left: 1em;
+} */
+
+/* Remove bullet points on hover */
+ul.styled-list li a:hover::before {
+  content: "→";
+  color: #949c4a;
+}

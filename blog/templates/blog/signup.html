@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup page</title>
+    <link rel="stylesheet" href="{% static 'blog/auth.css' %}">
+</head>
+<body>
+    <div class="heading-container">
+        <h2>Sign up for an awesome experience!</h2><br><br><br>
+    </div> 
+    <div class="signup-container">
+        {% if exists %}
+        <p class="username-exists">Username already exists, please try another one</p>
+        {% endif %}
+        <form action="{% url 'signup' %}" method="POST">
+            {% csrf_token %}
+            {{ form }}
+            <button>sign up</button>
+        </form>
+    </div>
+</body>
+</html>
