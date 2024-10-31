@@ -143,7 +143,7 @@ if not DEBUG:
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-MEDIA_ROOT = BASE_DIR / "uploads"
+MEDIA_ROOT = BASE_DIR / "staticfiles/uploads"
 
 MEDIA_URL = "/images/"
 

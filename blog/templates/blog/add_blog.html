@@ -23,7 +23,10 @@
             {{ field.errors  }}
         {% endfor %} {% endcomment %}
         {{ form }}
-        <br> <br><br>
+        <br>
+        <p>Oops! didn't find your name </p> <br>
+        <a href="{% url 'add_author' %}">please register auhorship here</a>
+        <br> <br>
         <button>add blog</button> 
     </form>
 {% endblock %}
