@@ -28,7 +28,7 @@ SECRET_KEY = "django-insecure-9+14ylffmu$pw-0opsgijjc1mw@qy&dx24o@^g(4=moy99f61o
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = getenv("IS_DEVELOPMENT", True)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["mysite-jxj4.onrender.com"]
 # getenv("APP_HOST")
 
 # Application definition
