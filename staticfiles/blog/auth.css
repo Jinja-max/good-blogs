@@ -1,0 +1,92 @@
+/* Overall page styling */
+body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Signup form styling */
+.signup-container {
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
+  width: 350px;
+  padding: 20px;
+  text-align: center;
+}
+
+.signup-container h2 {
+  color: #ffffff;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Form labels */
+label {
+  color: #cfcfcf;
+  font-weight: bold;
+  margin-top: 10px;
+  display: block;
+  text-align: left;
+}
+
+/* Input fields */
+input[type="text"],
+input[type="password"] {
+  width: 95%;
+  padding: 10px;
+  margin: 8px 0 16px 0;
+  border-radius: 4px;
+  background-color: #333;
+  border: 1px solid #444;
+  color: #ffffff;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: #6200ea;
+  outline: none;
+}
+
+/* Signup button */
+button {
+  background-color: #6200ea;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #02731c;
+}
+
+/* Username exists message */
+p.username-exists {
+  color: #ff5252;
+  font-size: 14px;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* Center and style heading */
+.heading-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.heading-container h2 {
+  color: #ffffff;
+  font-size: 26px;
+  margin: 0;
+}

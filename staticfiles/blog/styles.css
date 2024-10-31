@@ -1,0 +1,128 @@
+/* Dark mode form container */
+
+:root {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --input-bg-color: #1e1e1e;
+  --input-border-color: #444444;
+  --button-bg-color: #214a86;
+  --button-text-color: #e0e0e0;
+  --button-hover-bg-color: #555;
+  --label-color: #e0e0e0;
+  --highlight-color: #bb86fc;
+}
+
+.form-container {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 25px;
+  background-color: #2c2c2c; /* Darker background */
+  border: 1px solid #444;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.3s ease;
+}
+
+.form-container:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+/* Dark mode form fields */
+.form-container label {
+  display: block;
+  margin-bottom: 8px;
+  color: #e0e0e0; /* Light text for contrast */
+  font-weight: 500;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="password"],
+.form-container textarea {
+  width: 95%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border: 1px solid #555;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #3a3a3a; /* Darker input background */
+  color: #e0e0e0; /* Light text color */
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-container input[type="text"]:focus,
+.form-container input[type="email"]:focus,
+.form-container input[type="password"]:focus,
+.form-container textarea:focus {
+  border-color: #66afe9;
+  box-shadow: 0 0 8px rgba(102, 175, 233, 0.5);
+  outline: none;
+}
+
+/* Dark mode form buttons */
+.form-container button[type="submit"] {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s ease;
+}
+
+.form-container button[type="submit"]:hover {
+  background-color: #388e3c;
+}
+
+/* Dark mode form errors */
+.errorlist {
+  color: #e57373; /* Lighter red for dark mode */
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.errorlist li {
+  margin-bottom: 4px;
+}
+
+/* Error inputs in dark mode */
+.error input[type="text"],
+.error input[type="email"],
+.error input[type="password"],
+.error textarea {
+  border-color: #e57373;
+  background-color: #502020; /* Darker red background for errors */
+}
+
+/* Dark mode placeholder styling for better UX */
+.form-container input::placeholder,
+.form-container textarea::placeholder {
+  color: #bbb;
+  font-style: italic;
+}
+
+/* Responsive Design for Dark Mode */
+@media (max-width: 480px) {
+  .form-container {
+    padding: 20px;
+    margin: 20px;
+  }
+}
+
+button {
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--button-hover-bg-color);
+}

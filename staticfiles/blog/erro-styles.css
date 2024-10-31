@@ -1,0 +1,103 @@
+/* Error theme for form container */
+.form-container-error {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: #3a1f1f; /* Dark red background */
+    border: 1px solid #d9534f; /* Red border to indicate error */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(217, 83, 79, 0.5); /* Red shadow */
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .form-container-error:hover {
+    box-shadow: 0 8px 16px rgba(217, 83, 79, 0.7); /* Enhanced shadow on hover */
+    background-color: #4d2a2a; /* Slightly lighter red on hover */
+  }
+  
+  /* Error theme form fields */
+  .form-container-error label {
+    display: block;
+    margin-bottom: 8px;
+    color: #f5c6cb; /* Light red text for contrast */
+    font-weight: 500;
+  }
+  
+  .form-container-error input[type="text"],
+  .form-container-error input[type="email"],
+  .form-container-error input[type="password"],
+  .form-container-error textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #d9534f; /* Red border for inputs */
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: #5c2b2b; /* Darker red input background */
+    color: #f8d7da; /* Light red text color */
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .form-container-error input[type="text"]:focus,
+  .form-container-error input[type="email"]:focus,
+  .form-container-error input[type="password"]:focus,
+  .form-container-error textarea:focus {
+    border-color: #f5c6cb; /* Lighter red on focus */
+    box-shadow: 0 0 8px rgba(245, 198, 203, 0.6); /* Soft red glow on focus */
+    outline: none;
+  }
+  
+  /* Error theme form buttons */
+  .form-container-error button[type="submit"] {
+    background-color: #d9534f; /* Red button background */
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .form-container-error button[type="submit"]:hover {
+    background-color: #c9302c; /* Darker red on hover */
+  }
+  
+  /* Error list styling */
+  .form-container-error .errorlist {
+    color: #f8d7da; /* Light red for better visibility */
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    padding-left: 20px;
+    list-style: disc;
+  }
+  
+  .form-container-error .errorlist li {
+    margin-bottom: 4px;
+  }
+  
+  /* Error inputs in error theme */
+  .form-container-error .error input[type="text"],
+  .form-container-error .error input[type="email"],
+  .form-container-error .error input[type="password"],
+  .form-container-error .error textarea {
+    border-color: #f5c6cb; /* Light red border for error inputs */
+    background-color: #6e3131; /* Slightly darker red background for error inputs */
+  }
+  
+  /* Placeholder styling in error theme */
+  .form-container-error input::placeholder,
+  .form-container-error textarea::placeholder {
+    color: #f5c6cb; /* Light red placeholder color */
+    font-style: italic;
+  }
+  
+  /* Responsive Design for Error Theme */
+  @media (max-width: 480px) {
+    .form-container-error {
+      padding: 20px;
+      margin: 20px;
+    }
+  }
+  

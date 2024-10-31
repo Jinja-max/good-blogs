@@ -31,4 +31,12 @@ urlpatterns = [
     path("login/", views.LoginView.as_view(), name="login"),
     path("add-author/", views.AuthorCreateView.as_view(), name="add_author"),
     path("logout/", views.logout, name="logout"),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    # static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT),
+    # static(settings.STATIC_URL, document_root=settings.STATIC_ROOT),
+]
+# + [
+#     static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT),
+#     static(settings.STATIC_URL, document_root=settings.STATIC_ROOT),
+# ]
+# urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+# urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
